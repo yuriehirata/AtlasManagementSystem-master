@@ -9,6 +9,15 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 use App\Models\Posts\Like;
 use Auth;
+use App\Models\Users\Subjects;
+
+class User extends Model
+{
+    public function subjects()
+    {
+        return $this->belongsToMany(Subject::class);
+    }
+}
 
 class User extends Authenticatable
 {
@@ -78,4 +87,5 @@ class User extends Authenticatable
     public function likePostId(){
         return Like::where('like_user_id', Auth::id());
     }
+
 }
