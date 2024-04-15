@@ -11,13 +11,13 @@ use App\Models\Posts\Like;
 use Auth;
 use App\Models\Users\Subjects;
 
-class User extends Model
-{
-    public function subjects()
-    {
-        return $this->belongsToMany(Subject::class);
-    }
-}
+// class User extends Model
+// {
+//     public function subjects()
+//     {
+//         return $this->belongsToMany(Subject::class);
+//     }
+// }
 
 class User extends Authenticatable
 {
@@ -75,8 +75,9 @@ class User extends Authenticatable
         return $this->belongsToMany('App\Models\Calendars\ReserveSettings', 'reserve_setting_users', 'user_id', 'reserve_setting_id')->withPivot('id');
     }
 
-    public function subjects(){
-        return $this->belongsToMany(Subject::class);// リレーションの定義
+    public function subjects()
+    {
+        return $this->belongsToMany('App\Models\Users\Subjects');// リレーションの定義
     }
 
     // いいねしているかどうか
