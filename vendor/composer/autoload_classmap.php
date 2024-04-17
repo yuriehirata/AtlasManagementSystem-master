@@ -58,6 +58,7 @@ return array(
     'App\\Searchs\\SelectIds' => $baseDir . '/app/Searchs/SelectIds.php',
     'App\\Searchs\\SelectNameDetails' => $baseDir . '/app/Searchs/SelectNameDetails.php',
     'App\\Searchs\\SelectNames' => $baseDir . '/app/Searchs/SelectNames.php',
+    'App\\User' => $baseDir . '/app/User.php',
     'Attribute' => $vendorDir . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
     'Barryvdh\\Debugbar\\Console\\ClearCommand' => $vendorDir . '/barryvdh/laravel-debugbar/src/Console/ClearCommand.php',
     'Barryvdh\\Debugbar\\Controllers\\AssetController' => $vendorDir . '/barryvdh/laravel-debugbar/src/Controllers/AssetController.php',

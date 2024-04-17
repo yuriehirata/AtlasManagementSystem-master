@@ -28,6 +28,9 @@ public function register(Request $request)
         'password' => 'required|string|min:8|max:30|confirmed',
     ]);
 
+    // バリデーションに失敗した場合は、リダイレクトしてエラーメッセージを表示
+    return redirect()->back()->withErrors($validatedData);
+
     $user = User::create([
         'over_name' => $validatedData['over_name'],
         'under_name' => $validatedData['under_name'],
